@@ -1,12 +1,28 @@
 <?php
-
+/**
+ * McGowan\Form\Views
+ */
 namespace McGowan\Form\Views
 {
+	/**
+	 * @ignore
+	 */
 	defined('IN_LIBRARY') or exit;
 	
+	/**
+	 * Form
+	 */
 	class Form extends \McGowan\HTMl\Views\Element
 	{
-		public function __construct()
+		/**
+		 * __construct
+		 *
+		 * @access public
+		 * @param string Contains the action="" attribute value.
+		 * @param string Contains the method="" attribute value.
+		 * @return void
+		 */
+		public function __construct($action = '', $method = 'POST')
 		{
 			parent::__construct('form');
 		}
@@ -35,7 +51,7 @@ namespace McGowan\Form\Views
 		{
 			return parent::defaultAttributes() + array(
 				'action' => '',
-				'method' => '',
+				'method' => 'POST',
 				'name' => ''
 			);
 		}
