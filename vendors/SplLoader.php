@@ -101,6 +101,7 @@ final class SplLoader
             foreach( $this->_include_paths as $lookup_path )
             {
                 $path = $lookup_path . $this->_dir_sep . $piecesStr . $this->_dir_sep;
+                
                 if( !is_dir($path) )
                 {
                     continue;
