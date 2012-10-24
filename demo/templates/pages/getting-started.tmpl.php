@@ -1,3 +1,28 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at dolor quam, non elementum turpis. Curabitur elementum orci nec orci lacinia vestibulum. Curabitur mi metus, feugiat sit amet placerat sit amet, gravida eget mi. In ut dolor vitae nibh euismod egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel volutpat est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin id imperdiet urna. Curabitur posuere aliquet commodo. Morbi quam dui, lacinia in suscipit et, eleifend non erat.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at dolor quam, non elementum turpis. Curabitur elementum orci nec orci lacinia vestibulum. Curabitur mi metus, feugiat sit amet placerat sit amet, gravida eget mi. In ut dolor vitae nibh euismod egestas.</p>
 
-<?php print $form->render(true); ?>
+<h1>Example 1: Generic Form</h1>
+<dl class="tabs">
+    <dd class="active"><a href="#render">Example</a></dd>
+    <dd><a href="#description">Description</a></dd>
+    <dd><a href="#code">Code</a></dd>
+</dl>
+
+<ul class="tabs-content">
+    <li class="active" id="renderTab">
+        <?php print $form; ?>
+    </li>
+    <li id="descriptionTab">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at dolor quam, non elementum turpis. Curabitur elementum orci nec orci lacinia vestibulum. Curabitur mi metus, feugiat sit amet placerat sit amet, gravida eget mi. In ut dolor vitae nibh euismod egestas.</p>
+    </li>
+    <li id="codeTab">
+        <pre style="background-color: #f2f2f2; border: 1px solid #d2d2d2; overflow: scroll; width: 100%;">
+&lt;?php
+$form = new McGowan\Form\Views\Form();
+$form->addChild( new \McGowan\Form\Fields\Views\Field('Name', new McGowan\Form\Fields\Views\Text('name') ) );
+$form->addChild( new \McGowan\Form\Fields\Views\Field('Email', new McGowan\Form\Fields\Views\Email('email') ) );
+$form->addChild( new \McGowan\Form\Fields\Views\Field('', new McGowan\Form\Fields\Views\Submit('submit', 'Send')) );
+
+print $form;
+        </pre>
+    </li>
+</ul>
