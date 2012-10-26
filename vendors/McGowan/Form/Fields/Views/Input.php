@@ -27,7 +27,7 @@ namespace McGowan\Form\Fields\Views
          */
         public function __construct($type = '', $name = '', $value = '')
         {
-            parent::__construct('input', array());
+            parent::__construct('input');
             
             $this->type($type);
             $this->value($value);
